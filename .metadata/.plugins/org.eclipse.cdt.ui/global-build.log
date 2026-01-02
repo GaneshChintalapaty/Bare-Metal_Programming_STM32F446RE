@@ -246,3 +246,422 @@ Finished building: default.size.stdout
  
 Finished building: Led_Toggle.list
  
+16:43:40 **** Build of configuration Debug for project Define_GPIO_Using_Struct ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:36:14: error: unknown type name 'uint32_t'
+   36 |         __IO uint32_t MODER;    //GPIO port Mode register offset: 0x00
+      |              ^~~~~~~~
+../Src/main.c:37:14: error: unknown type name 'uint32_t'
+   37 |         __IO uint32_t OTYPER;   //GPIO port output type register offset: 0x04
+      |              ^~~~~~~~
+../Src/main.c:38:14: error: unknown type name 'uint32_t'
+   38 |         __IO uint32_t OSPEEDR;  //GPIO port speed register offset: 0x08
+      |              ^~~~~~~~
+../Src/main.c:39:14: error: unknown type name 'uint32_t'
+   39 |         __IO uint32_t PUPDR;    //GPIO port pull up pull down register offset: 0x0C
+      |              ^~~~~~~~
+../Src/main.c:40:14: error: unknown type name 'uint32_t'
+   40 |         __IO uint32_t IDR;              //GPIO port input data register offset: 0x10
+      |              ^~~~~~~~
+../Src/main.c:41:14: error: unknown type name 'uint32_t'
+   41 |         __IO uint32_t ODR;              //GPIO port output data register offset: 0x14
+      |              ^~~~~~~~
+../Src/main.c:42:14: error: unknown type name 'uint32_t'
+   42 |         __IO uint32_t BSRR;             //GPIO port Bit set Reset register offset: 0x18
+      |              ^~~~~~~~
+../Src/main.c:43:14: error: unknown type name 'uint32_t'
+   43 |         __IO uint32_t LCKR;             //GPIO port configuration lock register offset: 0x1C
+      |              ^~~~~~~~
+../Src/main.c:44:14: error: unknown type name 'uint32_t'
+   44 |         __IO uint32_t AFR[2];   //GPIO port alternative function register offset: 0x20-0x24
+      |              ^~~~~~~~
+../Src/main.c:49:8: error: unknown type name 'uint32_t'
+   49 |   __IO uint32_t CR;           /* RCC clock control register,                     Address offset: 0x00 */
+      |        ^~~~~~~~
+../Src/main.c:50:8: error: unknown type name 'uint32_t'
+   50 |   __IO uint32_t PLLCFGR;      /* RCC PLL configuration register,                 Address offset: 0x04 */
+      |        ^~~~~~~~
+../Src/main.c:51:8: error: unknown type name 'uint32_t'
+   51 |   __IO uint32_t CFGR;         /* RCC clock configuration register,               Address offset: 0x08 */
+      |        ^~~~~~~~
+../Src/main.c:52:8: error: unknown type name 'uint32_t'
+   52 |   __IO uint32_t CIR;          /* RCC clock interrupt register,                   Address offset: 0x0C */
+      |        ^~~~~~~~
+../Src/main.c:53:8: error: unknown type name 'uint32_t'
+   53 |   __IO uint32_t AHB1RSTR;     /* RCC AHB1 peripheral reset register,              Address offset: 0x10 */
+      |        ^~~~~~~~
+../Src/main.c:54:8: error: unknown type name 'uint32_t'
+   54 |   __IO uint32_t AHB2RSTR;     /* RCC AHB2 peripheral reset register,              Address offset: 0x14 */
+      |        ^~~~~~~~
+../Src/main.c:55:8: error: unknown type name 'uint32_t'
+   55 |   __IO uint32_t AHB3RSTR;     /* RCC AHB3 peripheral reset register,              Address offset: 0x18 */
+      |        ^~~~~~~~
+../Src/main.c:56:8: error: unknown type name 'uint32_t'
+   56 |        uint32_t RESERVED0;    /* Reserved, 0x1C */
+      |        ^~~~~~~~
+../Src/main.c:57:8: error: unknown type name 'uint32_t'
+   57 |   __IO uint32_t APB1RSTR;     /* RCC APB1 peripheral reset register,              Address offset: 0x20 */
+      |        ^~~~~~~~
+../Src/main.c:58:8: error: unknown type name 'uint32_t'
+   58 |   __IO uint32_t APB2RSTR;     /* RCC APB2 peripheral reset register,              Address offset: 0x24 */
+      |        ^~~~~~~~
+../Src/main.c:59:8: error: unknown type name 'uint32_t'
+   59 |        uint32_t RESERVED1[2]; /* Reserved, 0x28-0x2C */
+      |        ^~~~~~~~
+../Src/main.c:60:8: error: unknown type name 'uint32_t'
+   60 |   __IO uint32_t AHB1ENR;      /* RCC AHB1 peripheral clock enable register,       Address offset: 0x30 */
+      |        ^~~~~~~~
+../Src/main.c:61:8: error: unknown type name 'uint32_t'
+   61 |   __IO uint32_t AHB2ENR;      /* RCC AHB2 peripheral clock enable register,       Address offset: 0x34 */
+      |        ^~~~~~~~
+../Src/main.c:62:8: error: unknown type name 'uint32_t'
+   62 |   __IO uint32_t AHB3ENR;      /* RCC AHB3 peripheral clock enable register,       Address offset: 0x38 */
+      |        ^~~~~~~~
+../Src/main.c:63:8: error: unknown type name 'uint32_t'
+   63 |        uint32_t RESERVED2;    /* Reserved, 0x3C */
+      |        ^~~~~~~~
+../Src/main.c:64:8: error: unknown type name 'uint32_t'
+   64 |   __IO uint32_t APB1ENR;      /* RCC APB1 peripheral clock enable register,       Address offset: 0x40 */
+      |        ^~~~~~~~
+../Src/main.c:65:8: error: unknown type name 'uint32_t'
+   65 |   __IO uint32_t APB2ENR;      /* RCC APB2 peripheral clock enable register,       Address offset: 0x44 */
+      |        ^~~~~~~~
+../Src/main.c:66:8: error: unknown type name 'uint32_t'
+   66 |        uint32_t RESERVED3[2]; /* Reserved, 0x48-0x4C */
+      |        ^~~~~~~~
+../Src/main.c:67:8: error: unknown type name 'uint32_t'
+   67 |   __IO uint32_t AHB1LPENR;    /* RCC AHB1 peripheral clock enable in low power,   Address offset: 0x50 */
+      |        ^~~~~~~~
+../Src/main.c:68:8: error: unknown type name 'uint32_t'
+   68 |   __IO uint32_t AHB2LPENR;    /* RCC AHB2 peripheral clock enable in low power,   Address offset: 0x54 */
+      |        ^~~~~~~~
+../Src/main.c:69:8: error: unknown type name 'uint32_t'
+   69 |   __IO uint32_t AHB3LPENR;    /* RCC AHB3 peripheral clock enable in low power,   Address offset: 0x58 */
+      |        ^~~~~~~~
+../Src/main.c:70:8: error: unknown type name 'uint32_t'
+   70 |        uint32_t RESERVED4;    /* Reserved, 0x5C */
+      |        ^~~~~~~~
+../Src/main.c:71:8: error: unknown type name 'uint32_t'
+   71 |   __IO uint32_t APB1LPENR;    /* RCC APB1 peripheral clock enable in low power,   Address offset: 0x60 */
+      |        ^~~~~~~~
+../Src/main.c:72:8: error: unknown type name 'uint32_t'
+   72 |   __IO uint32_t APB2LPENR;    /* RCC APB2 peripheral clock enable in low power,   Address offset: 0x64 */
+      |        ^~~~~~~~
+../Src/main.c:73:8: error: unknown type name 'uint32_t'
+   73 |        uint32_t RESERVED5[2]; /* Reserved, 0x68-0x6C */
+      |        ^~~~~~~~
+../Src/main.c:74:8: error: unknown type name 'uint32_t'
+   74 |   __IO uint32_t BDCR;         /* RCC Backup domain control register,              Address offset: 0x70 */
+      |        ^~~~~~~~
+../Src/main.c:75:8: error: unknown type name 'uint32_t'
+   75 |   __IO uint32_t CSR;          /* RCC clock control & status register,             Address offset: 0x74 */
+      |        ^~~~~~~~
+../Src/main.c:76:8: error: unknown type name 'uint32_t'
+   76 |        uint32_t RESERVED6[2]; /* Reserved, 0x78-0x7C */
+      |        ^~~~~~~~
+../Src/main.c:77:8: error: unknown type name 'uint32_t'
+   77 |   __IO uint32_t SSCGR;        /* RCC spread spectrum clock generation register,   Address offset: 0x80 */
+      |        ^~~~~~~~
+../Src/main.c:78:8: error: unknown type name 'uint32_t'
+   78 |   __IO uint32_t PLLI2SCFGR;   /* RCC PLLI2S configuration register,               Address offset: 0x84 */
+      |        ^~~~~~~~
+../Src/main.c:79:8: error: unknown type name 'uint32_t'
+   79 |        uint32_t RESERVED7;    /* Reserved, 0x88 */
+      |        ^~~~~~~~
+../Src/main.c:80:8: error: unknown type name 'uint32_t'
+   80 |   __IO uint32_t DCKCFGR;          /* RCC Dedicated clocks configuration register*/
+      |        ^~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:44:25 **** Incremental Build of configuration Debug for project Define_GPIO_Using_Struct ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:36:18: error: unknown type name 'uint32_t'
+   36 |         volatile uint32_t MODER;        //GPIO port Mode register offset: 0x00
+      |                  ^~~~~~~~
+../Src/main.c:37:14: error: unknown type name 'uint32_t'
+   37 |         __IO uint32_t OTYPER;   //GPIO port output type register offset: 0x04
+      |              ^~~~~~~~
+../Src/main.c:38:14: error: unknown type name 'uint32_t'
+   38 |         __IO uint32_t OSPEEDR;  //GPIO port speed register offset: 0x08
+      |              ^~~~~~~~
+../Src/main.c:39:14: error: unknown type name 'uint32_t'
+   39 |         __IO uint32_t PUPDR;    //GPIO port pull up pull down register offset: 0x0C
+      |              ^~~~~~~~
+../Src/main.c:40:14: error: unknown type name 'uint32_t'
+   40 |         __IO uint32_t IDR;              //GPIO port input data register offset: 0x10
+      |              ^~~~~~~~
+../Src/main.c:41:14: error: unknown type name 'uint32_t'
+   41 |         __IO uint32_t ODR;              //GPIO port output data register offset: 0x14
+      |              ^~~~~~~~
+../Src/main.c:42:14: error: unknown type name 'uint32_t'
+   42 |         __IO uint32_t BSRR;             //GPIO port Bit set Reset register offset: 0x18
+      |              ^~~~~~~~
+../Src/main.c:43:14: error: unknown type name 'uint32_t'
+   43 |         __IO uint32_t LCKR;             //GPIO port configuration lock register offset: 0x1C
+      |              ^~~~~~~~
+../Src/main.c:44:14: error: unknown type name 'uint32_t'
+   44 |         __IO uint32_t AFR[2];   //GPIO port alternative function register offset: 0x20-0x24
+      |              ^~~~~~~~
+../Src/main.c:49:8: error: unknown type name 'uint32_t'
+   49 |   __IO uint32_t CR;           /* RCC clock control register,                     Address offset: 0x00 */
+      |        ^~~~~~~~
+../Src/main.c:50:8: error: unknown type name 'uint32_t'
+   50 |   __IO uint32_t PLLCFGR;      /* RCC PLL configuration register,                 Address offset: 0x04 */
+      |        ^~~~~~~~
+../Src/main.c:51:8: error: unknown type name 'uint32_t'
+   51 |   __IO uint32_t CFGR;         /* RCC clock configuration register,               Address offset: 0x08 */
+      |        ^~~~~~~~
+../Src/main.c:52:8: error: unknown type name 'uint32_t'
+   52 |   __IO uint32_t CIR;          /* RCC clock interrupt register,                   Address offset: 0x0C */
+      |        ^~~~~~~~
+../Src/main.c:53:8: error: unknown type name 'uint32_t'
+   53 |   __IO uint32_t AHB1RSTR;     /* RCC AHB1 peripheral reset register,              Address offset: 0x10 */
+      |        ^~~~~~~~
+../Src/main.c:54:8: error: unknown type name 'uint32_t'
+   54 |   __IO uint32_t AHB2RSTR;     /* RCC AHB2 peripheral reset register,              Address offset: 0x14 */
+      |        ^~~~~~~~
+../Src/main.c:55:8: error: unknown type name 'uint32_t'
+   55 |   __IO uint32_t AHB3RSTR;     /* RCC AHB3 peripheral reset register,              Address offset: 0x18 */
+      |        ^~~~~~~~
+../Src/main.c:56:8: error: unknown type name 'uint32_t'
+   56 |        uint32_t RESERVED0;    /* Reserved, 0x1C */
+      |        ^~~~~~~~
+../Src/main.c:57:8: error: unknown type name 'uint32_t'
+   57 |   __IO uint32_t APB1RSTR;     /* RCC APB1 peripheral reset register,              Address offset: 0x20 */
+      |        ^~~~~~~~
+../Src/main.c:58:8: error: unknown type name 'uint32_t'
+   58 |   __IO uint32_t APB2RSTR;     /* RCC APB2 peripheral reset register,              Address offset: 0x24 */
+      |        ^~~~~~~~
+../Src/main.c:59:8: error: unknown type name 'uint32_t'
+   59 |        uint32_t RESERVED1[2]; /* Reserved, 0x28-0x2C */
+      |        ^~~~~~~~
+../Src/main.c:60:8: error: unknown type name 'uint32_t'
+   60 |   __IO uint32_t AHB1ENR;      /* RCC AHB1 peripheral clock enable register,       Address offset: 0x30 */
+      |        ^~~~~~~~
+../Src/main.c:61:8: error: unknown type name 'uint32_t'
+   61 |   __IO uint32_t AHB2ENR;      /* RCC AHB2 peripheral clock enable register,       Address offset: 0x34 */
+      |        ^~~~~~~~
+../Src/main.c:62:8: error: unknown type name 'uint32_t'
+   62 |   __IO uint32_t AHB3ENR;      /* RCC AHB3 peripheral clock enable register,       Address offset: 0x38 */
+      |        ^~~~~~~~
+../Src/main.c:63:8: error: unknown type name 'uint32_t'
+   63 |        uint32_t RESERVED2;    /* Reserved, 0x3C */
+      |        ^~~~~~~~
+../Src/main.c:64:8: error: unknown type name 'uint32_t'
+   64 |   __IO uint32_t APB1ENR;      /* RCC APB1 peripheral clock enable register,       Address offset: 0x40 */
+      |        ^~~~~~~~
+../Src/main.c:65:8: error: unknown type name 'uint32_t'
+   65 |   __IO uint32_t APB2ENR;      /* RCC APB2 peripheral clock enable register,       Address offset: 0x44 */
+      |        ^~~~~~~~
+../Src/main.c:66:8: error: unknown type name 'uint32_t'
+   66 |        uint32_t RESERVED3[2]; /* Reserved, 0x48-0x4C */
+      |        ^~~~~~~~
+../Src/main.c:67:8: error: unknown type name 'uint32_t'
+   67 |   __IO uint32_t AHB1LPENR;    /* RCC AHB1 peripheral clock enable in low power,   Address offset: 0x50 */
+      |        ^~~~~~~~
+../Src/main.c:68:8: error: unknown type name 'uint32_t'
+   68 |   __IO uint32_t AHB2LPENR;    /* RCC AHB2 peripheral clock enable in low power,   Address offset: 0x54 */
+      |        ^~~~~~~~
+../Src/main.c:69:8: error: unknown type name 'uint32_t'
+   69 |   __IO uint32_t AHB3LPENR;    /* RCC AHB3 peripheral clock enable in low power,   Address offset: 0x58 */
+      |        ^~~~~~~~
+../Src/main.c:70:8: error: unknown type name 'uint32_t'
+   70 |        uint32_t RESERVED4;    /* Reserved, 0x5C */
+      |        ^~~~~~~~
+../Src/main.c:71:8: error: unknown type name 'uint32_t'
+   71 |   __IO uint32_t APB1LPENR;    /* RCC APB1 peripheral clock enable in low power,   Address offset: 0x60 */
+      |        ^~~~~~~~
+../Src/main.c:72:8: error: unknown type name 'uint32_t'
+   72 |   __IO uint32_t APB2LPENR;    /* RCC APB2 peripheral clock enable in low power,   Address offset: 0x64 */
+      |        ^~~~~~~~
+../Src/main.c:73:8: error: unknown type name 'uint32_t'
+   73 |        uint32_t RESERVED5[2]; /* Reserved, 0x68-0x6C */
+      |        ^~~~~~~~
+../Src/main.c:74:8: error: unknown type name 'uint32_t'
+   74 |   __IO uint32_t BDCR;         /* RCC Backup domain control register,              Address offset: 0x70 */
+      |        ^~~~~~~~
+../Src/main.c:75:8: error: unknown type name 'uint32_t'
+   75 |   __IO uint32_t CSR;          /* RCC clock control & status register,             Address offset: 0x74 */
+      |        ^~~~~~~~
+../Src/main.c:76:8: error: unknown type name 'uint32_t'
+   76 |        uint32_t RESERVED6[2]; /* Reserved, 0x78-0x7C */
+      |        ^~~~~~~~
+../Src/main.c:77:8: error: unknown type name 'uint32_t'
+   77 |   __IO uint32_t SSCGR;        /* RCC spread spectrum clock generation register,   Address offset: 0x80 */
+      |        ^~~~~~~~
+../Src/main.c:78:8: error: unknown type name 'uint32_t'
+   78 |   __IO uint32_t PLLI2SCFGR;   /* RCC PLLI2S configuration register,               Address offset: 0x84 */
+      |        ^~~~~~~~
+../Src/main.c:79:8: error: unknown type name 'uint32_t'
+   79 |        uint32_t RESERVED7;    /* Reserved, 0x88 */
+      |        ^~~~~~~~
+../Src/main.c:80:8: error: unknown type name 'uint32_t'
+   80 |   __IO uint32_t DCKCFGR;          /* RCC Dedicated clocks configuration register*/
+      |        ^~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:44:49 **** Incremental Build of configuration Debug for project Define_GPIO_Using_Struct ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c:36:14: error: unknown type name 'uint32_t'
+   36 |         __IO uint32_t MODER;    //GPIO port Mode register offset: 0x00
+      |              ^~~~~~~~
+../Src/main.c:37:14: error: unknown type name 'uint32_t'
+   37 |         __IO uint32_t OTYPER;   //GPIO port output type register offset: 0x04
+      |              ^~~~~~~~
+../Src/main.c:38:14: error: unknown type name 'uint32_t'
+   38 |         __IO uint32_t OSPEEDR;  //GPIO port speed register offset: 0x08
+      |              ^~~~~~~~
+../Src/main.c:39:14: error: unknown type name 'uint32_t'
+   39 |         __IO uint32_t PUPDR;    //GPIO port pull up pull down register offset: 0x0C
+      |              ^~~~~~~~
+../Src/main.c:40:14: error: unknown type name 'uint32_t'
+   40 |         __IO uint32_t IDR;              //GPIO port input data register offset: 0x10
+      |              ^~~~~~~~
+../Src/main.c:41:14: error: unknown type name 'uint32_t'
+   41 |         __IO uint32_t ODR;              //GPIO port output data register offset: 0x14
+      |              ^~~~~~~~
+../Src/main.c:42:14: error: unknown type name 'uint32_t'
+   42 |         __IO uint32_t BSRR;             //GPIO port Bit set Reset register offset: 0x18
+      |              ^~~~~~~~
+../Src/main.c:43:14: error: unknown type name 'uint32_t'
+   43 |         __IO uint32_t LCKR;             //GPIO port configuration lock register offset: 0x1C
+      |              ^~~~~~~~
+../Src/main.c:44:14: error: unknown type name 'uint32_t'
+   44 |         __IO uint32_t AFR[2];   //GPIO port alternative function register offset: 0x20-0x24
+      |              ^~~~~~~~
+../Src/main.c:49:8: error: unknown type name 'uint32_t'
+   49 |   __IO uint32_t CR;           /* RCC clock control register,                     Address offset: 0x00 */
+      |        ^~~~~~~~
+../Src/main.c:50:8: error: unknown type name 'uint32_t'
+   50 |   __IO uint32_t PLLCFGR;      /* RCC PLL configuration register,                 Address offset: 0x04 */
+      |        ^~~~~~~~
+../Src/main.c:51:8: error: unknown type name 'uint32_t'
+   51 |   __IO uint32_t CFGR;         /* RCC clock configuration register,               Address offset: 0x08 */
+      |        ^~~~~~~~
+../Src/main.c:52:8: error: unknown type name 'uint32_t'
+   52 |   __IO uint32_t CIR;          /* RCC clock interrupt register,                   Address offset: 0x0C */
+      |        ^~~~~~~~
+../Src/main.c:53:8: error: unknown type name 'uint32_t'
+   53 |   __IO uint32_t AHB1RSTR;     /* RCC AHB1 peripheral reset register,              Address offset: 0x10 */
+      |        ^~~~~~~~
+../Src/main.c:54:8: error: unknown type name 'uint32_t'
+   54 |   __IO uint32_t AHB2RSTR;     /* RCC AHB2 peripheral reset register,              Address offset: 0x14 */
+      |        ^~~~~~~~
+../Src/main.c:55:8: error: unknown type name 'uint32_t'
+   55 |   __IO uint32_t AHB3RSTR;     /* RCC AHB3 peripheral reset register,              Address offset: 0x18 */
+      |        ^~~~~~~~
+../Src/main.c:56:8: error: unknown type name 'uint32_t'
+   56 |        uint32_t RESERVED0;    /* Reserved, 0x1C */
+      |        ^~~~~~~~
+../Src/main.c:57:8: error: unknown type name 'uint32_t'
+   57 |   __IO uint32_t APB1RSTR;     /* RCC APB1 peripheral reset register,              Address offset: 0x20 */
+      |        ^~~~~~~~
+../Src/main.c:58:8: error: unknown type name 'uint32_t'
+   58 |   __IO uint32_t APB2RSTR;     /* RCC APB2 peripheral reset register,              Address offset: 0x24 */
+      |        ^~~~~~~~
+../Src/main.c:59:8: error: unknown type name 'uint32_t'
+   59 |        uint32_t RESERVED1[2]; /* Reserved, 0x28-0x2C */
+      |        ^~~~~~~~
+../Src/main.c:60:8: error: unknown type name 'uint32_t'
+   60 |   __IO uint32_t AHB1ENR;      /* RCC AHB1 peripheral clock enable register,       Address offset: 0x30 */
+      |        ^~~~~~~~
+../Src/main.c:61:8: error: unknown type name 'uint32_t'
+   61 |   __IO uint32_t AHB2ENR;      /* RCC AHB2 peripheral clock enable register,       Address offset: 0x34 */
+      |        ^~~~~~~~
+../Src/main.c:62:8: error: unknown type name 'uint32_t'
+   62 |   __IO uint32_t AHB3ENR;      /* RCC AHB3 peripheral clock enable register,       Address offset: 0x38 */
+      |        ^~~~~~~~
+../Src/main.c:63:8: error: unknown type name 'uint32_t'
+   63 |        uint32_t RESERVED2;    /* Reserved, 0x3C */
+      |        ^~~~~~~~
+../Src/main.c:64:8: error: unknown type name 'uint32_t'
+   64 |   __IO uint32_t APB1ENR;      /* RCC APB1 peripheral clock enable register,       Address offset: 0x40 */
+      |        ^~~~~~~~
+../Src/main.c:65:8: error: unknown type name 'uint32_t'
+   65 |   __IO uint32_t APB2ENR;      /* RCC APB2 peripheral clock enable register,       Address offset: 0x44 */
+      |        ^~~~~~~~
+../Src/main.c:66:8: error: unknown type name 'uint32_t'
+   66 |        uint32_t RESERVED3[2]; /* Reserved, 0x48-0x4C */
+      |        ^~~~~~~~
+../Src/main.c:67:8: error: unknown type name 'uint32_t'
+   67 |   __IO uint32_t AHB1LPENR;    /* RCC AHB1 peripheral clock enable in low power,   Address offset: 0x50 */
+      |        ^~~~~~~~
+../Src/main.c:68:8: error: unknown type name 'uint32_t'
+   68 |   __IO uint32_t AHB2LPENR;    /* RCC AHB2 peripheral clock enable in low power,   Address offset: 0x54 */
+      |        ^~~~~~~~
+../Src/main.c:69:8: error: unknown type name 'uint32_t'
+   69 |   __IO uint32_t AHB3LPENR;    /* RCC AHB3 peripheral clock enable in low power,   Address offset: 0x58 */
+      |        ^~~~~~~~
+../Src/main.c:70:8: error: unknown type name 'uint32_t'
+   70 |        uint32_t RESERVED4;    /* Reserved, 0x5C */
+      |        ^~~~~~~~
+../Src/main.c:71:8: error: unknown type name 'uint32_t'
+   71 |   __IO uint32_t APB1LPENR;    /* RCC APB1 peripheral clock enable in low power,   Address offset: 0x60 */
+      |        ^~~~~~~~
+../Src/main.c:72:8: error: unknown type name 'uint32_t'
+   72 |   __IO uint32_t APB2LPENR;    /* RCC APB2 peripheral clock enable in low power,   Address offset: 0x64 */
+      |        ^~~~~~~~
+../Src/main.c:73:8: error: unknown type name 'uint32_t'
+   73 |        uint32_t RESERVED5[2]; /* Reserved, 0x68-0x6C */
+      |        ^~~~~~~~
+../Src/main.c:74:8: error: unknown type name 'uint32_t'
+   74 |   __IO uint32_t BDCR;         /* RCC Backup domain control register,              Address offset: 0x70 */
+      |        ^~~~~~~~
+../Src/main.c:75:8: error: unknown type name 'uint32_t'
+   75 |   __IO uint32_t CSR;          /* RCC clock control & status register,             Address offset: 0x74 */
+      |        ^~~~~~~~
+../Src/main.c:76:8: error: unknown type name 'uint32_t'
+   76 |        uint32_t RESERVED6[2]; /* Reserved, 0x78-0x7C */
+      |        ^~~~~~~~
+../Src/main.c:77:8: error: unknown type name 'uint32_t'
+   77 |   __IO uint32_t SSCGR;        /* RCC spread spectrum clock generation register,   Address offset: 0x80 */
+      |        ^~~~~~~~
+../Src/main.c:78:8: error: unknown type name 'uint32_t'
+   78 |   __IO uint32_t PLLI2SCFGR;   /* RCC PLLI2S configuration register,               Address offset: 0x84 */
+      |        ^~~~~~~~
+../Src/main.c:79:8: error: unknown type name 'uint32_t'
+   79 |        uint32_t RESERVED7;    /* Reserved, 0x88 */
+      |        ^~~~~~~~
+../Src/main.c:80:8: error: unknown type name 'uint32_t'
+   80 |   __IO uint32_t DCKCFGR;          /* RCC Dedicated clocks configuration register*/
+      |        ^~~~~~~~
+make: *** [Src/subdir.mk:25: Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+16:46:23 **** Incremental Build of configuration Debug for project Define_GPIO_Using_Struct ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Define_GPIO_Using_Struct.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Define_GPIO_Using_Struct\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Define_GPIO_Using_Struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Define_GPIO_Using_Struct.elf
+ 
+arm-none-eabi-size  Define_GPIO_Using_Struct.elf 
+arm-none-eabi-objdump -h -S Define_GPIO_Using_Struct.elf  > "Define_GPIO_Using_Struct.list"
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	Define_GPIO_Using_Struct.elf
+Finished building: default.size.stdout
+ 
+Finished building: Define_GPIO_Using_Struct.list
+ 
+16:46:38 **** Incremental Build of configuration Debug for project Define_GPIO_Using_Struct ****
+make -j8 all 
+arm-none-eabi-size  Define_GPIO_Using_Struct.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	Define_GPIO_Using_Struct.elf
+Finished building: default.size.stdout
+ 
+16:48:15 **** Incremental Build of configuration Debug for project Define_GPIO_Using_Struct ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Define_GPIO_Using_Struct.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Define_GPIO_Using_Struct\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Define_GPIO_Using_Struct.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Define_GPIO_Using_Struct.elf
+ 
+arm-none-eabi-size  Define_GPIO_Using_Struct.elf 
+arm-none-eabi-objdump -h -S Define_GPIO_Using_Struct.elf  > "Define_GPIO_Using_Struct.list"
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	Define_GPIO_Using_Struct.elf
+Finished building: default.size.stdout
+ 
+Finished building: Define_GPIO_Using_Struct.list
+ 
