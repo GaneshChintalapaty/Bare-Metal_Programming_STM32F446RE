@@ -1,0 +1,248 @@
+14:19:12 **** Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc -mcpu=cortex-m4 -g3 -DDEBUG -c -x assembler-with-cpp -MMD -MP -MF"Startup/startup_stm32f446retx.d" -MT"Startup/startup_stm32f446retx.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Startup/startup_stm32f446retx.o" "../Startup/startup_stm32f446retx.s"
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Src/syscalls.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/syscalls.d" -MT"Src/syscalls.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/syscalls.o"
+arm-none-eabi-gcc "../Src/sysmem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/sysmem.d" -MT"Src/sysmem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/sysmem.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    772	      0	   1568	   2340	    924	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:19:53 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-size  Led_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      0	   1568	   2340	    924	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+14:20:36 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-size  Led_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+    772	      0	   1568	   2340	    924	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+14:21:39 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    768	      0	   1568	   2336	    920	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:22:53 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:34:06 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    796	      0	   1568	   2364	    93c	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:34:25 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    784	      0	   1568	   2352	    930	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:36:36 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:37:40 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:38:02 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:38:22 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    816	      0	   1568	   2384	    950	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:39:00 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    816	      0	   1568	   2384	    950	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:39:21 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:40:29 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-size  Led_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+14:42:27 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-size  Led_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+14:43:49 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-size  Led_Toggle.elf 
+   text	   data	    bss	    dec	    hex	filename
+    824	      0	   1568	   2392	    958	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+14:44:45 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    780	      0	   1568	   2348	    92c	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:46:09 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    788	      0	   1568	   2356	    934	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:47:21 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    784	      0	   1568	   2352	    930	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 
+14:48:01 **** Incremental Build of configuration Debug for project Led_Toggle ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F4 -DSTM32F446RETx -DNUCLEO_F446RE -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Led_Toggle.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\STM32_Projects\STM32F411\Led_Toggle\STM32F446RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Led_Toggle.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Led_Toggle.elf
+ 
+arm-none-eabi-size  Led_Toggle.elf 
+arm-none-eabi-objdump -h -S Led_Toggle.elf  > "Led_Toggle.list"
+   text	   data	    bss	    dec	    hex	filename
+    828	      0	   1568	   2396	    95c	Led_Toggle.elf
+Finished building: default.size.stdout
+ 
+Finished building: Led_Toggle.list
+ 

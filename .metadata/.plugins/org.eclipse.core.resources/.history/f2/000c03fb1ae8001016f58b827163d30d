@@ -1,0 +1,49 @@
+/*
+ * File: main.c
+ * author: Ganesh Chintalapaty
+ * Objective: Toggle LED without using any HAL lib (Bare-metal programming)
+ *
+ * Board used: NUCLEO-F446RE (STM32F446RE)
+ *
+ * Where is the LED connected?
+ *
+ * PORT: PORTA
+ * Pin: 5
+ *
+ * */
+
+#define PERIPH_BASE 		(0x40000000UL)												//Peripheral Base address
+#define AHB1PERIPH_OFFSET 	(0x00020000UL)												//Advanced High-performance Bus 1 offset
+#define AHB1PERIPH_BASE		(PERIPH_BASE + AHB1PERIPH_OFFSET)							//Advanced High-performance Bus 1 address
+#define GPIOA_OFFSET		(0x00000000UL)												//GPIOA offset
+#define GPIOA_BASE			(AHB1PERIPH_BASE + GPIOA_OFFSET)							//GPIOA address
+#define RCC_OFFSET			(0x00003800UL)												//Reset Clock Control offset
+#define RCC_BASE			(AHB1PERIPH_BASE + RCC_OFFSET)								//Reset Clock Control address
+#define AHB1EN_R_OFFSET		(0x00000030UL)												//AHB1 enable register offset
+#define RCC_AHB1EN_R		(*(volatile unsigned int *)(RCC_BASE + AHB1EN_R_OFFSET))	//AHB1 enable register address
+#define MODE_R_OFFSET		(0x00000000UL)												//Mode register offset
+#define GPIOA_MODE_R		(*(volatile unsigned int *)(GPIOA_BASE + MODE_R_OFFSET))	//GPIOA mode register address
+#define OD_R_OFFSET			(0x00000014UL)												//Output register offset
+#define GPIOA_OD_R			(*(volatile unsigned int *)(GPIOA_BASE + OD_R_OFFSET))		//GPIOA output register address
+#define GPIOAEN				(1U<<0)														//GPIOA Enable
+#define SET_PIN5			(1U<<5)														//Set Pin 5
+#define CLEAR_PIN5			(0U<<5)														//Clear Pin 5
+
+
+int main(void)
+{
+//Enable clock access to GPIOA//
+	RCC_AHB1EN_R |= GPIOAEN;
+
+//SET GPIOA pin 5 as OUTPUT pin//
+	GPIOA_MODE_R |= (1U<<10);	//Set bit 10 of mode register to 1
+	GPIOA_MODE_R &= ~(1U<<11);	//Set bit 11 of mode register to 0
+
+	while(1)
+	{
+		GPIOA_OD_R |= SET_PIN5;	//Toggle pin 5
+		for(int i = 0; i < 10000; i++);
+		GPIOA_OD_R |= CLEAR_PIN5;	//Toggle pin 5
+		for(int i = 0; i < 10000; i++);
+	}
+}
