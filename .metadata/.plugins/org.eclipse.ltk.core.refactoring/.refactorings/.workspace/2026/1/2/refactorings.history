@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;GPIO_Output_Driver&apos; to &apos;GPIO_Output&apos;" description="Rename resource &apos;GPIO_Output_Driver&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/GPIO_Output_Driver" name="GPIO_Output" stamp="1767747444886" updateReferences="true"/>
+</session>
