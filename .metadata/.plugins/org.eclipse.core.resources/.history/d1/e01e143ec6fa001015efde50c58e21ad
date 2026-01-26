@@ -22,13 +22,11 @@ int main(void)
 		//Check if BTN is pressed
 		if(GPIOC->IDR & (1U<<13))	//Verify if bit 13 is high
 		{
-			//According to the hardware setup and circuit decide if you need to set or reset the output pin.
-			//On my hardware I need to clear bit to switch LED on when BTN is pressed.
-			GPIOA->ODR &= ~(1U<<5);	//Clear bit
+			GPIOA->ODR |= (1U<<5);
 		}
 		else
 		{
-			GPIOA->ODR |= (1U<<5);	//Set bit
+			GPIOA->ODR &= ~(1U<<5);
 		}
 	}
 }
