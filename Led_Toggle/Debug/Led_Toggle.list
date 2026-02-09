@@ -88,7 +88,7 @@ int main(void)
  8000204:	b480      	push	{r7}
  8000206:	b083      	sub	sp, #12
  8000208:	af00      	add	r7, sp, #0
-//Enable clock access to GPIOA//
+	//Enable clock access to GPIOA//
 	RCC_AHB1EN_R |= GPIOAEN;
  800020a:	4b19      	ldr	r3, [pc, #100]	@ (8000270 <main+0x6c>)
  800020c:	681b      	ldr	r3, [r3, #0]
@@ -96,7 +96,7 @@ int main(void)
  8000210:	f043 0301 	orr.w	r3, r3, #1
  8000214:	6013      	str	r3, [r2, #0]
 
-//SET GPIOA pin 5 as OUTPUT pin//
+	//SET GPIOA pin 5 as OUTPUT pin//
 	GPIOA_MODE_R |= (1U<<10);	//Set bit 10 of mode register to 1
  8000216:	4b17      	ldr	r3, [pc, #92]	@ (8000274 <main+0x70>)
  8000218:	681b      	ldr	r3, [r3, #0]
@@ -112,13 +112,13 @@ int main(void)
 
 	while(1)
 	{
-		GPIOA_OD_R |= SET_PIN5;	//Toggle pin 5
+		GPIOA_OD_R |= SET_PIN5;				//set pin 5
  800022e:	4b12      	ldr	r3, [pc, #72]	@ (8000278 <main+0x74>)
  8000230:	681b      	ldr	r3, [r3, #0]
  8000232:	4a11      	ldr	r2, [pc, #68]	@ (8000278 <main+0x74>)
  8000234:	f043 0320 	orr.w	r3, r3, #32
  8000238:	6013      	str	r3, [r2, #0]
-		for(int i = 0; i < 100000; i++){}
+		for(int i = 0; i < 100000; i++);	//delay
  800023a:	2300      	movs	r3, #0
  800023c:	607b      	str	r3, [r7, #4]
  800023e:	e002      	b.n	8000246 <main+0x42>
@@ -129,13 +129,13 @@ int main(void)
  8000248:	4a0c      	ldr	r2, [pc, #48]	@ (800027c <main+0x78>)
  800024a:	4293      	cmp	r3, r2
  800024c:	ddf8      	ble.n	8000240 <main+0x3c>
-		GPIOA_OD_R &= CLEAR_PIN5;	//Toggle pin 5
+		GPIOA_OD_R &= CLEAR_PIN5;			//clear pin 5
  800024e:	4b0a      	ldr	r3, [pc, #40]	@ (8000278 <main+0x74>)
  8000250:	681b      	ldr	r3, [r3, #0]
  8000252:	4a09      	ldr	r2, [pc, #36]	@ (8000278 <main+0x74>)
  8000254:	f023 0320 	bic.w	r3, r3, #32
  8000258:	6013      	str	r3, [r2, #0]
-		for(int i = 0; i < 100000; i++){}
+		for(int i = 0; i < 100000; i++);	//delay
  800025a:	2300      	movs	r3, #0
  800025c:	603b      	str	r3, [r7, #0]
  800025e:	e002      	b.n	8000266 <main+0x62>
@@ -146,7 +146,7 @@ int main(void)
  8000268:	4a04      	ldr	r2, [pc, #16]	@ (800027c <main+0x78>)
  800026a:	4293      	cmp	r3, r2
  800026c:	ddf8      	ble.n	8000260 <main+0x5c>
-		GPIOA_OD_R |= SET_PIN5;	//Toggle pin 5
+		GPIOA_OD_R |= SET_PIN5;				//set pin 5
  800026e:	e7de      	b.n	800022e <main+0x2a>
  8000270:	40023830 	.word	0x40023830
  8000274:	40020000 	.word	0x40020000
