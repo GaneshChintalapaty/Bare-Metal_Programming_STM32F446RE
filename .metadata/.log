@@ -3106,3 +3106,6 @@ org.eclipse.core.runtime.CoreException: attempt to set description for a project
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1459)
 !SUBENTRY 1 org.eclipse.cdt.core 4 -1 2026-02-08 22:04:37.598
 !MESSAGE attempt to set description for a project which does not exist or not open
+
+!ENTRY org.eclipse.cdt.core 1 0 2026-02-09 19:44:05.993
+!MESSAGE Indexed 'ADC' (4 sources, 64 headers) in 0.961 sec: 3,430 declarations; 5,731 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.022%)
